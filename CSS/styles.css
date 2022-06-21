@@ -15,6 +15,9 @@
   --portfolio-cards-background-color: #fff;
   --portfolio-border-solid-color: #eeeeee;
 }
+img {
+  display: block;
+}
 
 body {
   background-color: var(--white-color);
@@ -44,6 +47,9 @@ body {
   line-height: 1.88;
   letter-spacing: 0.06em;
   border: 1px solid transparent;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .button-hero:hover,
@@ -220,7 +226,7 @@ body {
   width: 1200px; /* посмотрели на размер сетки, обязательно считаем с крайними падингами 1170+15+15 */
   padding-left: 15px;
   padding-right: 15px;
-  outline: 2px solid red;
+  outline: 1px solid red;
 }
 h1,
 h2,
@@ -241,7 +247,7 @@ p {
 }
 .header .container {
   padding-top: 24px;
-  padding-bottom: 25px;
+  padding-bottom: 24px;
   align-items: center;
 }
 .section {
@@ -289,10 +295,10 @@ p {
   padding-top: 200px;
   padding-bottom: 200px;
 }
-/* .spesials .container {
+.spesials.section {
   padding-top: 94px;
-  padding-bottom: 94px;
-} */
+  padding-bottom: 0;
+}
 /* .busyness .container {
   padding-bottom: 94px;
 }
@@ -323,4 +329,46 @@ p {
 .nav-portfolio .container {
   padding-top: 94px;
   padding-bottom: 50px;
+}
+/* мпрятали элемент из разметки */
+.spesials h2 {
+  display: none;
+}
+.spesials .list {
+  display: flex;
+}
+.spesials .item:not(:last-child) {
+  margin-right: 30px;
+}
+.spesials .item {
+  width: 270px;
+}
+.busyness .list {
+  display: flex;
+}
+.busyness .item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.team h2 {
+  font-weight: 700;
+  color: var(--black-color);
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.team .list {
+  display: flex;
+}
+.team .item:not(:last-child) {
+  margin-right: 30px;
+}
+.team .name {
+  margin-top: 30px;
+  text-align: center;
+}
+.team p {
+  margin-bottom: 30px;
+  text-align: center;
 }
