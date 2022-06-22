@@ -15,9 +15,6 @@
   --portfolio-cards-background-color: #fff;
   --portfolio-border-solid-color: #eeeeee;
 }
-img {
-  display: block;
-}
 
 body {
   background-color: var(--white-color);
@@ -32,24 +29,6 @@ body {
 }
 .link {
   text-decoration: none;
-}
-
-.button-hero {
-  border-radius: 4px;
-  padding: 10px 32px;
-  color: var(--white-color);
-  background-color: var(--blue-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  cursor: pointer;
-  font-family: "Roboto";
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
-  border: 1px solid transparent;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .button-hero:hover,
@@ -72,6 +51,23 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   border: 1px solid transparent;
+}
+.button-hero {
+  border-radius: 4px;
+  padding: 10px 32px;
+  color: var(--white-color);
+  background-color: var(--blue-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  border: 1px solid transparent;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .button-portfolio:hover,
@@ -216,7 +212,7 @@ body {
 }
 .portfolio-cards-background {
   background: var(--portfolio-cards-background-color);
-  border: 1px solid var(--portfolio-border-solid-color);
+  /* border: 1px solid var(--portfolio-border-solid-color); */
 }
 
 /* раазмещение элементов */
@@ -242,14 +238,22 @@ p {
   margin-top: 0px; /* убрали внешние отступы у заголовка для верстки */
   margin-bottom: 0px; /* убрали внешние отступы у заголовка для верстки */
 }
+
+img,
+.logo {
+  display: block;
+}
+
 .header {
   border-bottom: 1px solid var(--header-line-color);
 }
+
 .header .container {
   padding-top: 24px;
   padding-bottom: 24px;
   align-items: center;
 }
+
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -257,7 +261,7 @@ p {
 }
 
 .site-nav .list {
-  display: flex; /* расположили ли в списке в линию */
+  display: flex;
 }
 .site-nav .link,
 .contact .link {
@@ -299,13 +303,6 @@ p {
   padding-top: 94px;
   padding-bottom: 0;
 }
-/* .busyness .container {
-  padding-bottom: 94px;
-}
-.team .container {
-  padding-top: 94px;
-  padding-bottom: 94px; */
-/* } */
 
 .hero-title {
   margin-bottom: 30px;
@@ -325,14 +322,28 @@ p {
   padding-bottom: 60px;
 }
 
+.footer .logo {
+  margin-bottom: 20px;
+}
+
 /* portfolio */
 .nav-portfolio .container {
   padding-top: 94px;
   padding-bottom: 50px;
 }
-/* мпрятали элемент из разметки */
-.spesials h2 {
-  display: none;
+/* спрятали элемент из разметки */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 .spesials .list {
   display: flex;
@@ -371,4 +382,36 @@ p {
 .team p {
   margin-bottom: 30px;
   text-align: center;
+}
+
+/* ------------------------размещение портфолио */
+.nav-portfolio.section,
+.portfolio.section,
+.hero.section {
+  padding-bottom: 0;
+  padding-top: 0;
+}
+.nav-portfolio .list {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-portfolio .item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.portfolio .list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.portfolio .item {
+  background-color: tomato;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+.portfolio .item:nth-child(3n) {
+  margin-right: 0;
+}
+.portfolio .item:nth-last-child(-n + 3) {
+  margin-bottom: 0;
 }
