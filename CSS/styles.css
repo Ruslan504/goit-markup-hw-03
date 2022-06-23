@@ -185,6 +185,14 @@ body {
 .footer .link:focus {
   color: var(--hover-focus-color);
 }
+.footer .link {
+  display: inline-block;
+  margin-top: 9px;
+}
+.footer .link.logo {
+  margin-top: 0;
+  margin-right: 0;
+}
 .footer p,
 .footer .link {
   line-height: 1.71;
@@ -201,18 +209,20 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.88;
-  margin-left: 24px;
-  margin-bottom: 20px;
+  /* margin-left: 24px;
+  margin-bottom: 20px; */
 }
 .portfolio h3 {
-  margin-left: 24px;
+  margin-bottom: 4px;
 }
+
 .portfolio-cards-background {
   background: var(--portfolio-cards-background-color);
   /* border: 1px solid var(--portfolio-border-solid-color); */
 }
 .portfolio .border {
   border: 1px solid var(--portfolio-border-solid-color);
+  padding: 20px 24px;
 }
 
 /* раазмещение элементов */
@@ -222,6 +232,7 @@ body {
   width: 1200px; /* посмотрели на размер сетки, обязательно считаем с крайними падингами 1170+15+15 */
   padding-left: 15px;
   padding-right: 15px;
+  outline: 1px solid red;
 }
 h1,
 h2,
@@ -256,6 +267,7 @@ img,
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
+  outline: 1px solid blue;
 }
 
 .site-nav .list {
@@ -311,7 +323,7 @@ img,
   margin-bottom: 50px;
 }
 
-.footer .container {
+.footer {
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -322,8 +334,7 @@ img,
 
 /* portfolio */
 .nav-portfolio .container {
-  padding-top: 94px;
-  padding-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 /* спрятали элемент из разметки */
@@ -374,14 +385,12 @@ img,
 }
 
 /* ------------------------размещение портфолио */
-.nav-portfolio.section,
+
 .hero.section {
   padding-bottom: 0;
   padding-top: 0;
 }
-.portfolio.section {
-  padding-top: 0;
-}
+
 .nav-portfolio .list {
   display: flex;
   justify-content: center;
