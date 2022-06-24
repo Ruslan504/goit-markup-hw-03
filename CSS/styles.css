@@ -159,6 +159,7 @@ body {
 .team p {
   line-height: 1.19;
   font-weight: 400;
+  text-align: center;
 }
 
 .name {
@@ -232,7 +233,6 @@ body {
   width: 1200px; /* посмотрели на размер сетки, обязательно считаем с крайними падингами 1170+15+15 */
   padding-left: 15px;
   padding-right: 15px;
-  outline: 1px solid red;
 }
 h1,
 h2,
@@ -256,18 +256,17 @@ img,
 
 .header {
   border-bottom: 1px solid var(--header-line-color);
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .header .container {
-  padding-top: 24px;
-  padding-bottom: 24px;
   align-items: center;
 }
 
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
-  outline: 1px solid blue;
 }
 
 .site-nav .list {
@@ -301,10 +300,10 @@ img,
   margin-right: 50px;
 }
 
-.hero .container {
+/* .hero .container {
   padding-top: 200px;
   padding-bottom: 200px;
-}
+} */
 .spesials.section {
   padding-top: 94px;
   padding-bottom: 0;
@@ -376,19 +375,18 @@ img,
   margin-right: 30px;
 }
 .team .name {
-  margin-top: 30px;
   text-align: center;
 }
-.team p {
-  margin-bottom: 30px;
-  text-align: center;
+.team-text {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 /* ------------------------размещение портфолио */
 
 .hero.section {
-  padding-bottom: 0;
-  padding-top: 0;
+  padding-bottom: 200px;
+  padding-top: 200px;
 }
 
 .nav-portfolio .list {
